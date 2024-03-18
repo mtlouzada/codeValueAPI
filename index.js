@@ -1,13 +1,10 @@
 import entradaDados from 'readline-sync';
 
-console.log("Escolha uma das alternativas:");
-console.log("1 - Listar os salários mínimos de 2010 à 2020");
-console.log("2 - Listar o IPCA de 2010 à 2020");
-console.log("3 - Comparação entre o percentual de aumento salarial e o IPCA");
+let opcao1  = 1;
+let opcao2 = 2;
+let opcao3 = 3;
 
-console.log("Digite o número da sua escolha: ")
-
-let salarioMinimo = [
+var salarioMinimo = [
     {ano: 2010, salario: 510.00},
     {ano: 2011, salario: 510.00},
     {ano: 2012, salario: 510.00},
@@ -21,7 +18,7 @@ let salarioMinimo = [
     {ano: 2020, salario: 510.00}
 ];
 
-let salarioMinimo = [
+var precoInflacao = [
     {ano: 2010, ipca: 510.00},
     {ano: 2011, ipca: 510.00},
     {ano: 2012, ipca: 510.00},
@@ -34,3 +31,11 @@ let salarioMinimo = [
     {ano: 2019, ipca: 510.00},
     {ano: 2020, ipca: 510.00}
 ];
+
+console.log("\nEscolha uma das alternativas: \n");
+console.log("1 - Listar os salários mínimos de 2010 à 2020");
+console.log("2 - Listar o IPCA de 2010 à 2020");
+console.log("3 - Comparação entre o percentual de aumento salarial e o IPCA");
+
+console.log("\nDigite o número da sua escolha: \n")
+

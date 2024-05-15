@@ -1,4 +1,4 @@
-import entradaDados from 'readline-sync'
+const entradaDados = require('readline-sync');
 
 let salarioMinimo = [
     {ano: 2010, salario: 510.00},
@@ -34,21 +34,30 @@ console.log("1 - Listar os salários mínimos de 2010 à 2020");
 console.log("2 - Listar o IPCA de 2010 à 2020");
 console.log("3 - Comparação entre o percentual de aumento salarial e o IPCA");
 
-let escolha = entradaDados.question("\nDigite o número da sua escolha: \n")
+let escolha = entradaDados.question("\nDigite o numero da sua escolha: ")
 
 if(Number(escolha) == 1){
-    console.log(salarioMinimo.length)
-}
-else if{
+    for(let contador = 0; contador < salarioMinimo.length; contador++){
 
-}
-
-else{
-    
+        console.log("Ano: " + salarioMinimo[contador].ano + "\nSalário mínimo: " + salarioMinimo[contador].salario +"\n")
+    }
 }
 
+else if(Number(escolha) == 2){
+    for(let contador = 0; contador < Inflacao.length; contador++){
 
+        console.log("Ano: " + Inflacao[contador].ano + "\nInflação: " + Inflacao[contador].ipca +"\n")
+    }
+}
 
+else if(Number(escolha) == 3){
+    console.log(salarioMinimo, Inflacao)
+}
 
+else if(Number(escolha) > 3){
+    console.log("Não temos essa opção. Escolha um número de 1 a 3")
+}
 
-
+else {
+    console.log("Opção inválida. Escolha um número de 1 a 3")
+}

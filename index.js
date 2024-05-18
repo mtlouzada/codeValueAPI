@@ -28,36 +28,54 @@ let Inflacao = [
     {ano: 2020, ipca: 4.52}
 ];
 
-console.log("\nEscolha uma das alternativas: \n")
+console.log("\nEscolha uma das alternativas: \n");
 
 console.log("1 - Listar os salários mínimos de 2010 à 2020");
 console.log("2 - Listar o IPCA de 2010 à 2020");
 console.log("3 - Comparação entre o percentual de aumento salarial e o IPCA");
 
-let escolha = entradaDados.question("\nDigite o numero da sua escolha: ")
+let escolha = entradaDados.question("\nDigite o numero da sua escolha: ");
 
 if(Number(escolha) == 1){
     for(let contador = 0; contador < salarioMinimo.length; contador++){
 
-        console.log("Ano: " + salarioMinimo[contador].ano + "\nSalário mínimo: " + salarioMinimo[contador].salario +"\n")
+        let tamanhoResposta1 = 26;
+        let tamanhoResposta2 = 15;
+        let Ano = salarioMinimo[contador].ano.toString();
+        let SalarioM = salarioMinimo[contador].salario.toString();
+
+        let respostaIdentada1 = Ano.padStart(tamanhoResposta1, ".");
+        let respostaIdentada2 = SalarioM.padStart(tamanhoResposta2, ".");
+
+        console.log("\nAno:" + respostaIdentada1);
+        console.log("Salário mínimo:" + respostaIdentada2 +"\n");
     }
 }
 
 else if(Number(escolha) == 2){
     for(let contador = 0; contador < Inflacao.length; contador++){
 
-        console.log("Ano: " + Inflacao[contador].ano + "\nInflação: " + Inflacao[contador].ipca +"\n")
+        let tamanhoResposta1 = 26;
+        let tamanhoResposta2 = 21;
+        let Ano = Inflacao[contador].ano.toString();
+        let Ipca = Inflacao[contador].ipca.toString();
+
+        let respostaIdentada1 = Ano.padStart(tamanhoResposta1, ".");
+        let respostaIdentada2 = Ipca.padStart(tamanhoResposta2, ".");
+
+        console.log("\nAno:" + respostaIdentada1);
+        console.log("Inflação:" + respostaIdentada2 +"\n");
     }
 }
 
 else if(Number(escolha) == 3){
-    console.log(salarioMinimo, Inflacao)
+    console.log(salarioMinimo, Inflacao);
 }
 
 else if(Number(escolha) > 3){
-    console.log("Não temos essa opção. Escolha um número de 1 a 3")
+    console.log("\nNão temos essa opção. Escolha um número de 1 a 3\n");
 }
 
 else {
-    console.log("Opção inválida. Escolha um número de 1 a 3")
+    console.log("\nOpção inválida. Escolha apenas números de 1 a 3\n");
 }

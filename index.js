@@ -64,7 +64,7 @@ else if(Number(escolha) == 2){
         let respostaIdentada2 = Ipca.padStart(tamanhoResposta2, ".");
 
         console.log("\nAno:" + respostaIdentada1);
-        console.log("Inflação:" + respostaIdentada2 +"\n");
+        console.log("Inflação:" + respostaIdentada2 +"%\n");
     }
 }
 

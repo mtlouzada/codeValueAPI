@@ -42,9 +42,11 @@ if(Number(escolha) == 1){
         let tamanhoResposta1 = 26;
         let tamanhoResposta2 = 15;
         let Ano = salarioMinimo[contador].ano.toString();
-        let SalarioM = salarioMinimo[contador].salario.toString();
+        let SalarioM = salarioMinimo[contador].salario.replace(".",",").toString();
 
-        let respostaIdentada1 = Ano.padStart(tamanhoResposta1, ".");
+        // let SalarioM_formatado = SalarioM.replace(".",",");
+
+        let respostaIdentada1 = Ano.padStart(tamanhoResposta1,  ".");
         let respostaIdentada2 = SalarioM.padStart(tamanhoResposta2, ".");
 
         console.log("\nAno:" + respostaIdentada1);
@@ -64,7 +66,7 @@ else if(Number(escolha) == 2){
         let respostaIdentada2 = Ipca.padStart(tamanhoResposta2, ".");
 
         console.log("\nAno:" + respostaIdentada1);
-        console.log("Inflação:" + respostaIdentada2 +"\n");
+        console.log("Inflação:" + respostaIdentada2 +"%\n");
     }
 }
 

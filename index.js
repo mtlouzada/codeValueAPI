@@ -41,10 +41,9 @@ if(Number(escolha) == 1){
 
         let tamanhoResposta1 = 26;
         let tamanhoResposta2 = 15;
-        let Ano = salarioMinimo[contador].ano.toString();
-        let SalarioM = salarioMinimo[contador].salario.replace(".",",").toString();
 
-        // let SalarioM_formatado = SalarioM.replace(".",",");
+        let Ano = salarioMinimo[contador].ano.toString();
+        let SalarioM = salarioMinimo[contador].salario.toFixed(2).toString().replace(".",",");
 
         let respostaIdentada1 = Ano.padStart(tamanhoResposta1,  ".");
         let respostaIdentada2 = SalarioM.padStart(tamanhoResposta2, ".");

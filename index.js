@@ -59,7 +59,7 @@ else if(Number(escolha) == 2){
         let tamanhoResposta1 = 26;
         let tamanhoResposta2 = 21;
         let Ano = Inflacao[contador].ano.toString();
-        let Ipca = Inflacao[contador].ipca.toString();
+        let Ipca = Inflacao[contador].ipca.toFixed(2).toString().replace(".",",");
 
         let respostaIdentada1 = Ano.padStart(tamanhoResposta1, ".");
         let respostaIdentada2 = Ipca.padStart(tamanhoResposta2, ".");

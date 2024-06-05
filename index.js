@@ -75,9 +75,11 @@ else if(Number(escolha) == 3){
 
         let Ano = salarioMinimo[contador].ano.toString();
         let SalarioM = salarioMinimo[contador].salario.toFixed(2).toString().replace(".",",");
-
-        let DiffSalarioM = salarioMinimo[contador] - salarioMinimo[--contador];
-        let CresciSalarioM = (DiffSalarioM / salarioMinimo[--contador]) * 100;
+        
+        let contAnterior = contador == 0 ? 0 : contador - 1;
+        
+        let DiffSalarioM = salarioMinimo[contador] - salarioMinimo[contAnterior];
+        let CresciSalarioM = (DiffSalarioM / salarioMinimo[contAnterior]) * 100;
 
         let Ipca = Inflacao[contador].ipca.toFixed(2).toString().replace(".",",");
 

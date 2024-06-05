@@ -70,7 +70,23 @@ else if(Number(escolha) == 2){
 }
 
 else if(Number(escolha) == 3){
-    console.log(salarioMinimo, Inflacao);
+
+    for(let contador = 0; contador < salarioMinimo.length; contador++){
+
+        let Ano = salarioMinimo[contador].ano.toString();
+        let SalarioM = salarioMinimo[contador].salario.toFixed(2).toString().replace(".",",");
+
+        let DiffSalarioM = salarioMinimo[contador] - salarioMinimo[--contador];
+        let CresciSalarioM = (DiffSalarioM / salarioMinimo[--contador]) * 100;
+
+        let Ipca = Inflacao[contador].ipca.toFixed(2).toString().replace(".",",");
+
+        console.log("\nAno:" + Ano);
+        console.log("Salário mínimo:" + SalarioM);
+        console.log("Crescimento Salarial: " + CresciSalarioM + "%");
+        console.log("Inflação:" + Ipca +"%\n");
+
+    }
 }
 
 else if(Number(escolha) > 3){

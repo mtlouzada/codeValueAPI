@@ -1,3 +1,3 @@
-# 🧮 Projeto para calcular o sálario e a inflação
+# Sálario VS Inflação 💲💵💲
 
 > Status: ⚠️ Developing

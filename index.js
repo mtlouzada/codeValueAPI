@@ -36,36 +36,35 @@ console.log("3 - Comparação entre o percentual de aumento salarial e o IPCA");
 
 let escolha = entradaDados.question("\nDigite o numero da sua escolha: ");
 
+let AnoLabel = "Ano: ";
+let SalarioLabel = "Salário mínimo: ";
+let CresciSalarioLabel = "Crescimento Salarial: ";
+let InflacaoLabel = "Inflação IPCA: ";
+
+AnoLabel = AnoLabel.padEnd(30, '.');
+SalarioLabel = SalarioLabel.padEnd(30, '.');
+CresciSalarioLabel = CresciSalarioLabel.padEnd(30, '.');
+InflacaoLabel = InflacaoLabel.padEnd(30, '.');
+
 if(Number(escolha) == 1){
     for(let contador = 0; contador < salarioMinimo.length; contador++){
-
-        let tamanhoResposta1 = 26;
-        let tamanhoResposta2 = 15;
 
         let Ano = salarioMinimo[contador].ano.toString();
         let SalarioM = salarioMinimo[contador].salario.toFixed(2).toString().replace(".",",");
 
-        let respostaIdentada1 = Ano.padStart(tamanhoResposta1,  ".");
-        let respostaIdentada2 = SalarioM.padStart(tamanhoResposta2, ".");
-
-        console.log("\nAno:" + respostaIdentada1);
-        console.log("Salário mínimo:" + respostaIdentada2 +"\n");
+        console.log("\n" +AnoLabel + Ano);
+        console.log(SalarioLabel +"R$: " + SalarioM +"\n");
     }
 }
 
 else if(Number(escolha) == 2){
     for(let contador = 0; contador < Inflacao.length; contador++){
 
-        let tamanhoResposta1 = 26;
-        let tamanhoResposta2 = 21;
         let Ano = Inflacao[contador].ano.toString();
         let Ipca = Inflacao[contador].ipca.toFixed(2).toString().replace(".",",");
 
-        let respostaIdentada1 = Ano.padStart(tamanhoResposta1, ".");
-        let respostaIdentada2 = Ipca.padStart(tamanhoResposta2, ".");
-
-        console.log("\nAno:" + respostaIdentada1);
-        console.log("Inflação:" + respostaIdentada2 +"%\n");
+        console.log("\n" +AnoLabel + Ano);
+        console.log(InflacaoLabel + Ipca +"%\n");
     }
 }
 
@@ -78,15 +77,17 @@ else if(Number(escolha) == 3){
         
         let contAnterior = contador == 0 ? 0 : contador - 1;
         
-        let DiffSalarioM = salarioMinimo[contador] - salarioMinimo[contAnterior];
-        let CresciSalarioM = (DiffSalarioM / salarioMinimo[contAnterior]) * 100;
+        let DiffSalarioM = salarioMinimo[contador].salario - salarioMinimo[contAnterior].salario;
+        let CresciSalarioM = (DiffSalarioM / salarioMinimo[contAnterior].salario) * 100;
+
+        CresciSalarioM = CresciSalarioM.toFixed(2).toString().replace(".",",");
 
         let Ipca = Inflacao[contador].ipca.toFixed(2).toString().replace(".",",");
 
-        console.log("\nAno:" + Ano);
-        console.log("Salário mínimo:" + SalarioM);
-        console.log("Crescimento Salarial: " + CresciSalarioM + "%");
-        console.log("Inflação:" + Ipca +"%\n");
+        console.log("\n" + AnoLabel + Ano);
+        console.log(SalarioLabel +"R$: " + SalarioM);
+        console.log(CresciSalarioLabel + CresciSalarioM + "%");
+        console.log(InflacaoLabel + Ipca +"%\n");
 
     }
 }

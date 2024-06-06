@@ -15,7 +15,7 @@ This project was made to test my technical and programming logic skills, using J
 If you want to contribute, clone this repo, create your work branch and get your hands dirty!
 
 ```
-git clone https://github.com/mtlouzada/salarioXinflacao
+git clone https://github.com/mtlouzada/salarioXinflacao.git
 ```
 
 ```

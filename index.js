@@ -39,8 +39,8 @@ let Inflacao = [
 
 console.log("\nEscolha uma das alternativas: \n");
 
-console.log("1 - Listar os salários mínimos de 2010 à 2020");
-console.log("2 - Listar o IPCA de 2010 à 2020");
+console.log("1 - Listar os salários mínimos de 2010 à 2024");
+console.log("2 - Listar o IPCA de 2010 à 2024");
 console.log("3 - Comparação entre o percentual de aumento salarial e o IPCA");
 
 let escolha = entradaDados.question("\nDigite o numero da sua escolha: ");

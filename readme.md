@@ -42,3 +42,6 @@ At the end, open a Pull Request explaining the problem solved or feature made, i
 
 ### License 📃
 This project is under [MIT](https://github.com/mtlouzada/salarioXinflacao/blob/main/LICENSE) license
+
+### Developed by 🧑🏻‍💻
+#### Matheus Louzada [LinkedIn](https://www.linkedin.com/in/matheus-louzadaa)

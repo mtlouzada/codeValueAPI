@@ -1,4 +1,4 @@
-# Sálario VS Inflação 📉 💵
+# Salary VS Inflation 📉 💵
 
 ![Screenshot_2](https://github.com/mtlouzada/salarioXinflacao/assets/120414065/8aacf168-8350-4d90-a96e-18c666b00535)
 

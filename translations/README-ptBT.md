@@ -4,7 +4,7 @@
 
 ![Devmedia](https://img.shields.io/badge/DevMedia-E7ECEB?style=for-the-badge&logo=appium&logoColor=83B81A) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-_Read this in other languages:_ 🇧🇷 [_Português_](./translations/README-ptBR.md) 🟢🟡
+_Leia isso em outra lingua:_ 🇺🇸 [_English_](../readme.md) ⚪🔵
 
 ### Descrição:
 Este projeto foi feito para testar minhas habilidades técnicas e de lógica de programação, usando a linguagem JavaScript, para construir uma aplicação que resolve um desafio envolvendo dados bancários e dados IPCA. 

@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+# CodeValueAPI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Screenshot 2024-12-30 185924](https://github.com/user-attachments/assets/5aa81191-9dc0-494c-bf1e-1ac614e7aac3)
 
-Currently, two official plugins are available:
+Este repositório contém um projeto dividido em **backend** e **frontend**, com o objetivo de exibir informações sobre os salários mínimos de 2010 a 2024 e calcular a média dos salários entre 2018 e 2024. A solução é moderna, responsiva e utiliza tecnologias atuais como Vite, TypeScript, SASS e Node.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Backend
+- **Node.js**
+- **Express**
+- **TypeScript**
 
-- Configure the top-level `parserOptions` property like this:
+### Frontend
+- **Vite**
+- **React**
+- **TypeScript**
+- **SASS**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## Funcionalidades
+
+### Backend
+- API RESTful para gerenciamento de salários mínimos.
+- Endpoints:
+  - `GET /api/salaries`: Retorna a lista de salários.
+  - `GET /api/salaries/average?start=2018&end=2024`: Retorna a média de salários no intervalo especificado.
+
+### Frontend
+- Interface responsiva para exibir a lista de salários.
+- Exibição da média de salários entre 2018 e 2024.
+- Estilização minimalista e centralizada com SASS.
+
+---
+
+## Configuração do Projeto
+
+### Requisitos
+- Node.js (v16 ou superior)
+- NPM ou Yarn
+
+### Passo a Passo
+
+#### 1. Clonar o repositório
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd CodeValueAPI
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+#### 2. Configurar o Backend
+```bash
+cd backend
+npm install
+npx ts-node src/index.ts
 ```
+O servidor será iniciado em `http://localhost:3000`.
+
+#### 3. Configurar o Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+O frontend será iniciado em `http://localhost:5173`.
+
+## Exemplos de Uso
+
+### Requisições da API
+- **Obter a lista de salários:**
+  ```bash
+  curl http://localhost:3000/api/salaries
+  ```
+- **Calcular a média dos salários entre 2018 e 2024:**
+  ```bash
+  curl "http://localhost:3000/api/salaries/average?start=2018&end=2024"
+  ```
+
+---

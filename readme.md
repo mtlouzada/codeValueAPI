@@ -19,7 +19,8 @@ Este repositório contém um projeto dividido em **backend** e **frontend**, com
 - **TypeScript**
 - **SASS**
 
----
+### O que Aprendi 💡
+Neste projeto, aprendi a organizar o backend de forma modular, criando endpoints eficientes em uma API RESTful e integrando-a ao frontend. Foi uma experiência valiosa para entender o fluxo de dados entre as camadas e aplicar boas práticas de estruturação e manutenibilidade.
 
 ## Funcionalidades
 

@@ -19,7 +19,7 @@ const SalaryList: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Salários Mínimos</h1>
+      <h1>Salários Mínimos Devs</h1>
       <ul className="salary-list">
         {salaries.map((s) => (
           <li key={s.year}>

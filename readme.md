@@ -1,48 +1,50 @@
-# Salary VS Inflation 📉 💵
+# React + TypeScript + Vite
 
-![Screenshot_2](https://github.com/mtlouzada/salarioXinflacao/assets/120414065/8aacf168-8350-4d90-a96e-18c666b00535)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![Devmedia](https://img.shields.io/badge/DevMedia-E7ECEB?style=for-the-badge&logo=appium&logoColor=83B81A) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+Currently, two official plugins are available:
 
-_Read this in other languages:_ 🇧🇷 [_Português_](./translations/README-ptBR.md) 🟢🟡
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Description:
-This project was made to test my technical and programming logic skills, using JavaScript language, to build an application that solves a challenge involving bank data and IPCA data. 
-Concepts Used:
-> Variables
-> 
-> Operators
->
-> Data types
->
-> Conditional Statements
->
-> Inputs
->
-> Arrays
->
-> Loops and interation
->
-> String Methods
+## Expanding the ESLint configuration
 
-### Build with:
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-### How to Contribute? 📫
-If you want to contribute, clone this repo, create your work branch and get your hands dirty!
+- Configure the top-level `parserOptions` property like this:
 
-```
-git clone https://github.com/mtlouzada/salarioXinflacao.git
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
+
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
 ```
-git checkout -b feature/NAME
-```
-
-At the end, open a Pull Request explaining the problem solved or feature made, if exists, append screenshot of visual modifications and wait for the review!
-
-### License 📃
-This project is under [MIT](https://github.com/mtlouzada/salarioXinflacao/blob/main/LICENSE) license
-
-### Developed by 🧑🏻‍💻
-#### Matheus Louzada [LinkedIn](https://www.linkedin.com/in/matheus-louzadaa)
